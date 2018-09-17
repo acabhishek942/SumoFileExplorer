@@ -1,8 +1,9 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=ßˀ, initial-scale=1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      
       <!-- font awesome -->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
       <!--Import Google Icon Font-->
@@ -14,37 +15,34 @@
       <title>Sumo File Explorer</title>
    </head>
    <body>
-      <header>
-         <nav class="nav-wrapper transparent">
-            <div class="container">
-               <a class="brand-logo grey-text text-darken-2">sumo<span class="blue-text">logic</span></a>
-               <a href="#" class="sidenav-trigger" data-target="mobile-menu">
-               <i class="material-icons">menu</i>
-               </a>
-               <ul class="right hide-on-med-and-down">
-                  <li><a href="#photos" class="grey-text text-darken-2">Box1</a></li>
-                  <li><a href="#services" class="grey-text text-darken-2">Box2</a></li>
-                  <li><a href="#contact" class="grey-text text-darken-2">Box2</a></li>
-                  <!-- <li>
-                     <a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-tooltip="Instagram"><i class="fab fa-instagram"></i>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-tooltip="Facebook"><i class="fab fa-facebook"></i>
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-tooltip="Twitter"><i class="fab fa-twitter"></i>
-                     </a>
-                  </li> -->
-               </ul>
-               <ul class="sidenav grey lighten-2" id="mobile-menu">
-                  <li><a href="#">Box1</a></li>
-                  <li><a href="#">Box2</a></li>
-                  <li><a href="#">Box3</a></li>
-               </ul>
-            </div>
-         </nav>
-      </header>
-   </body>
+
+    <header>
+        <div class="navbar-fixed">
+        <div class="nav-wrapper">
+        <nav class="transparent" role="navigation">
+          <div class="nav-wrapper container">
+            <a class="brand-logo grey-text text-darken-2">sumo<span class="blue-text">logic</span></a>
+          </div>
+        </nav>
+        </div>
+        </div>
+    </header>
+        
+    <aside>
+        <ul id="slide-out" class="sidenav sidenav-fixed">
+          <li><a href="#!">First Sidebar Link</a></li>
+          <li><a href="#!">Second Sidebar Link</a></li>
+        </ul>
+    </aside>
+
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });
+    </script>
+  </body>
 </html>

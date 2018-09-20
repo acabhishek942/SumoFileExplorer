@@ -1,6 +1,13 @@
-
-
 .sidenav {
   top: 65px;
   width: 350px;
+}
+
+.inline-icon {
+  vertical-align: bottom;
+  font-size: 18px !important;
+}
+
+.file-expanded-view {
+  padding-left: 400px;
 }

@@ -41,6 +41,18 @@ httpGetAsync('long.json', function(data){
 
         // add a click event listener to the a tag 
         a.addEventListener("click", function(){
+            if (li.childNodes.length > 1){
+                li.removeChild(li.childNodes[1]);
+                return;
+            }
+            var nestedUl = document.createElement('ul');
+            var gamePlayResourceKeys = Object.keys(element['Game play resources']);
+            gamePlayResourceKeys.forEach(function(resource){
+                nestedli = document.createElement('li');
+                nestedli.innerHTML = resource;
+                nestedUl.appendChild(nestedli);
+            });
+            li.appendChild(nestedUl);
             var fileExpanded = document.getElementById('file-expanded-view');
             fileExpanded.innerHTML = JSON.stringify(element);
         });

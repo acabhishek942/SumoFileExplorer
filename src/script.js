@@ -24,6 +24,7 @@ httpGetAsync('long.json', function(data){
         var p = document.createElement('p');
         var i = document.createElement('i');
         var a = document.createElement('a');
+        
 
         // create the materialize icon of folder
         i.setAttribute('class', 'inline-icon material-icons');
@@ -37,6 +38,12 @@ httpGetAsync('long.json', function(data){
         p.appendChild(i);
         p.appendChild(a);
         a.innerHTML = element.title;
+
+        // add a click event listener to the a tag 
+        a.addEventListener("click", function(){
+            var fileExpanded = document.getElementById('file-expanded-view');
+            fileExpanded.innerHTML = JSON.stringify(element);
+        });
     }
     
 });
